@@ -1,0 +1,26 @@
+<mat-toolbar>
+
+  <img style="height: 50px; margin-right: 5px;" src="../../assets/pizza logo.png" alt="">
+    
+  <a routerLink="/viewpizza" style="color: black; text-decoration: none; font-weight: 650; font-size: larger; font-style: italic;">B-TECH PIZZA WALA</a>
+    
+  <span class="example-spacer"></span>
+
+  <a *ngIf="pizzaservice.isloggedin" routerLink="/viewpizza" style="color: white; margin-right: 2%;">
+
+    <mat-icon aria-hidden="false" routerLink="/viewpizza" fontIcon="home"></mat-icon>
+
+  </a>
+  
+  <a routerLink="/signup" style="color: white; margin-right: 2%;">
+
+    <mat-icon aria-hidden="false" routerLink="/signup" fontIcon="account_circle"></mat-icon>
+  
+  </a>
+  <!-- <p *ngIf="pizzaservice.isloggedin"></p> -->
+  <a (click)="logout()" *ngIf="pizzaservice.isloggedin"  style="color: white; margin-right: 2%;">
+
+    <mat-icon aria-hidden="false" fontIcon="settings_power"></mat-icon>
+  
+  </a>
+</mat-toolbar>

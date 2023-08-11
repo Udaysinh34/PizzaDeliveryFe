@@ -1,0 +1,127 @@
+.full-width {
+    width: 80%;
+    margin-left: 10%;
+  }
+  
+  .shipping-card {
+    min-width: 120px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 1%;
+  }
+  
+  .mat-radio-button {
+    display: block;
+    margin: 5px 0;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .col {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .col:last-child {
+    margin-right: 0;
+  }
+
+  mat-card-title{
+    color: white;
+    margin-left: 90px;
+    font-size: x-large;
+  }
+
+  mat-card{
+    background-color: rgb(1, 113, 115);
+    
+  }
+
+ 
+
+  mat-card-content{
+    margin-top: 2%;
+
+  }
+  .loginB{
+    margin-left: 28%;
+    margin-bottom: 1%;
+  }
+  .signupB{
+    margin-left: 26%;
+    color: blue;
+    margin-bottom: 1%;
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  .example-spacer {
+    flex: 1 1 auto;
+    margin-left: 5px;
+  }
+  .spacing{
+   margin: 10px;;
+  }
+  h2{
+    color: blueviolet;
+    padding: 15px;
+    margin-left: 5%;
+    font-size: 30px;
+  }
+  .example-form {
+    min-width: 300px;
+    max-width: 700px;
+    width: 100%;
+  }
+  .example-full-width {
+    width: 100%;
+  }
+  td {
+    padding-right: 8px;
+  }
+  .mat-radio-button ~ .mat-radio-button {
+    margin-left: 10%;
+    margin-bottom: 3%;
+  }
+  .p0 { 
+    text-indent: 2em; 
+}
+  .example-button-row button,
+.example-button-row a {
+  margin-right: 50px;
+}
+.warning{
+    color: crimson;
+}
+form{
+ padding-left: 5%;
+}
+#button1
+{
+     background-color: blue;
+     padding: 2%;
+     border-radius: 5px;
+     color: white;
+     border: none;
+}
+#button2{
+  background-color: black;
+  padding: 2%;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  margin-left: 30%;
+  border: none;
+}

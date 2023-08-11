@@ -1,0 +1,23 @@
+.example-card {
+    max-width: 270px;
+    height: 340px;
+    background-color: orange;
+  }
+
+mat-icon{
+
+    margin-left: 10%;
+}
+.imagep{
+  height: 150px;
+  width: auto;
+}
+::ng-deep .snack{
+  
+  color: red;
+}
+
+::ng-deep .snack2{
+  background-color: chartreuse !important;
+  color: red;
+}

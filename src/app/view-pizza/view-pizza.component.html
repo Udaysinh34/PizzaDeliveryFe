@@ -1,0 +1,28 @@
+<app-serach (pizzaWorddata)="getSearchText($event)"></app-serach>
+<div class=" row justify-content-center" > 
+    <mat-card *ngFor="let pizza of pizzaD" class="example-card shadow mx-5 my-3 rounded">
+      <mat-card-title style="color: black; margin-top: 10px; font-weight: 700;margin-bottom: 1%;">{{pizza.pizzaName}}</mat-card-title>
+      <img mat-card-image class="imagep" src="../../assets/{{pizza.pizzaName}}.jpg" alt="pizza photo">
+      <mat-card-content>
+        <p style="color: rgb(94, 94, 94); margin-top: 4%; font-weight: 500; font-size: larger;">Pizza Size : {{pizza.pizzaSize}}</p>
+        <p style="color: rgb(42, 56, 137); margin-top: 1%; font-weight: 700; font-size: larger;">Prize : ₹{{pizza.prize}}</p>
+        <p class="justify-content-center">
+          <button mat-raised-button color="primary"  (click)="decrease(pizza.items)" >-</button>
+          Items : {{pizza.items}}
+          <button mat-raised-button color="primary" (click)="increase(pizza.items)" >+</button>
+
+        </p>
+        
+      </mat-card-content>
+    
+      <div  class="position-absolute bottom-0 start-0" style="width: 250px;">
+        <mat-card-actions class="justify-content-center" >
+          
+         
+          <button mat-raised-button color="primary" type="submit" (click)="addcart(pizza.pizzaId)" >Order Now</button>
+          
+        </mat-card-actions>
+        
+      </div>
+    </mat-card>
+    </div>

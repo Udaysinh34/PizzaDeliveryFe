@@ -1,0 +1,89 @@
+<!-- 
+<mat-card class="shipping-card">
+    <mat-card-header>
+        <mat-card-title>SignUp</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="row">
+            <mat-form-field class="full-width">
+                <input type="email" matInput placeholder="Email" [(ngModel)]="user.email">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="full-width">
+                <input type="username" matInput placeholder="Username" [(ngModel)]="user.userName">
+            </mat-form-field>
+        </div>
+        
+        <div class="row">
+            <mat-form-field class="full-width">
+                <input type="password" matInput placeholder="Password" [(ngModel)]="user.password">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="full-width">
+                <input type="phoneNo" matInput placeholder="Phone Number" [(ngModel)]="user.phoneNumber">
+            </mat-form-field>
+        </div>
+    </mat-card-content>
+    <mat-card-actions>
+        <button class="loginB" mat-raised-button color="primary" type="submit" (click)="onSubmit()">Submit</button>
+        <button class="signupB" mat-raised-button color="accent" routerLink="/login">Login</button>
+    </mat-card-actions>
+</mat-card> -->
+
+
+<h2 color="primary">Registration Form</h2>
+  <form class="example-form " [formGroup]="signUpDetails" (ngSubmit)="onSubmit()" >
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>User name</mat-label>
+        <input matInput type="text" formControlName="userName" [(ngModel)]="user.userName">
+        <div class="warning" *ngIf="userName?.errors?.required">first name is required</div>
+        <div class="warning" *ngIf="userName?.errors?.minlength">First name should have at least 4 character </div>
+      </mat-form-field></td>
+
+    </tr></table>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email" email [(ngModel)]="user.email">
+        <div class="warning" *ngIf="email?.errors?.required">Email is required</div>
+        <div class="warning" *ngIf="email?.errors?.email">Enter valid email address</div>
+      </mat-form-field>
+
+      <table class="example-full-width" cellspacing="0">
+        <td><mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Password </mat-label>
+          <input matInput type="text" formControlName="password" [(ngModel)]="user.password" pattern="(?=.*[*&$@!.])(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}">
+          <div class="warning" *ngIf="password?.errors?.required">password is required</div>
+          <div class="warning" *ngIf="password?.errors?.pattern">password should have min 8 letter password,with atleast a symbol,upper and lower case and a number</div>
+        </mat-form-field></td>
+      </table>
+
+      <table class="example-full-width" cellspacing="0">
+      <td><mat-form-field class="example-full-width" appearance="fill">
+        <mat-label> Confirm Password </mat-label>
+        <input matInput type="text" formControlName="confirmPassword">
+        <div class="warning" *ngIf="signUpDetails.errors?.passMatch1==false">confirm password should not be null</div>
+        <div class="warning" *ngIf="signUpDetails.errors?.passMatch2==false">password and confirm password should match</div>
+      </mat-form-field></td>
+    </table>
+
+    
+      <table class="example-full-width" cellspacing="0"><tr>
+        
+      <td><mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Phone Number </mat-label>
+        <input matInput type="tel" formControlName="phoneNo" [(ngModel)]="user.phoneNumber" >
+        <div class="warning" *ngIf="phoneNumber?.errors?.required">Phone number is required </div>
+        <div class="warning" *ngIf="phoneNumber?.errors?.pattern">valid phone number contains 10 digits starting with 7/8/9</div>
+      </mat-form-field></td>
+        </tr></table>
+        
+       
+        <section class="example-button-row">
+            <button mat-raised-button type="reset" id="button2"  >Reset</button>
+            <button mat-raised-button id="button1" [disabled]="signUpDetails.invalid" >Submit</button>
+        </section>
+  </form>
